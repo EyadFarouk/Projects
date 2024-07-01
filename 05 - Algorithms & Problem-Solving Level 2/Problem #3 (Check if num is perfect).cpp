@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int inputNum(){
+int inputNum(){ //You can make a check if the number is positive if you want, I just tried to simplify it :D )
     int N;
     cin>>N;
     return N;
