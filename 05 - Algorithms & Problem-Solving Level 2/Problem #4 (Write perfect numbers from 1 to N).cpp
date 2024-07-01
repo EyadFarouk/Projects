@@ -1,17 +1,7 @@
-#include <bits/stdc++.h>
-#define ll long long
-#define daddy double;
-#define nl endl
-#define nll cout<<endl
-#define yes cout<<"YES"<<nl
-#define no cout<<"NO"<<nl
-#define tlp double t;cin>>t;for(int i=0;i<t;i++)
-#define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0)
-
 #include <iostream>
 using namespace std;
 
-int inputNum(){
+int inputNum(){ //You can make a check if the number is positive if you want, I just tried to simplify it :D )
     int N;
     cin>>N;
     return N;
