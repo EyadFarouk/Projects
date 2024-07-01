@@ -13,7 +13,7 @@ int getUnitDigit(int& num){  //Passing by reference
     return unit;
 }
 
-void displayDigitsFromUnits(int num){
+void SumOfDigits(int num){
     int sum=0;
     while (num) {
         sum+=getUnitDigit(num);
@@ -23,5 +23,5 @@ void displayDigitsFromUnits(int num){
 
 int main()
 {
-    displayDigitsFromUnits(inputNum());
+    SumOfDigits(inputNum());
 }
