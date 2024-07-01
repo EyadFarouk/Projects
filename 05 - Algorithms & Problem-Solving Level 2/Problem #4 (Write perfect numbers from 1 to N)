@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+#define ll long long
+#define daddy double;
+#define nl endl
+#define nll cout<<endl
+#define yes cout<<"YES"<<nl
+#define no cout<<"NO"<<nl
+#define tlp double t;cin>>t;for(int i=0;i<t;i++)
+#define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0)
+
+#include <iostream>
+using namespace std;
+
+int inputNum(){
+    int N;
+    cin>>N;
+    return N;
+}
+
+bool isPurrfect(int num){
+    int sum=0;
+    for (int i = 1; i*i < num; ++i) {
+        if(num%i==0)
+        {
+            sum+=i;
+            if(i!=1)
+                sum+=(num/i);
+        }
+    }
+    if(sum==num)
+        return true;
+    else
+        return false;
+}
+
+void checkPurrfect(int num){
+    if(isPurrfect(num))
+        cout<<num<<endl;
+}
+
+void writePerfectFrom1ToN(int num){
+    for (int i = 1; i < num; ++i) {
+        checkPurrfect(i);
+    }
+}
+
+int main()
+{
+    writePerfectFrom1ToN(inputNum());
+}
