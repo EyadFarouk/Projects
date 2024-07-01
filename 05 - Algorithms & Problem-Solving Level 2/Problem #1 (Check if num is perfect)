@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int inputNum(){
+    int N;
+    cin>>N;
+    return N;
+}
+
+bool isPurrfect(int num){
+    int sum=0;
+    for (int i = 1; i*i < num; ++i) {
+        if(num%i==0)
+        {
+            sum+=i;
+            if(i!=1)
+                sum+=(num/i);
+        }
+    }
+    if(sum==num)
+        return true;
+    else
+        return false;
+}
+
+void checkPurrfect(int num){
+    if(isPurrfect(num))
+        cout<<num<<" is a purrfect";
+    else
+        cout<<num<<" is not a purrfect";
+}
+
+int main()
+{
+    checkPurrfect(inputNum());
+}
