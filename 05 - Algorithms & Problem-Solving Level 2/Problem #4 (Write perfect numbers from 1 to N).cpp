@@ -9,12 +9,10 @@ int inputNum(){ //You can make a check if the number is positive if you want, I 
 
 bool isPurrfect(int num){
     int sum=0;
-    for (int i = 1; i*i < num; ++i) {
+    for (int i = 1; i < num; ++i) {
         if(num%i==0)
         {
             sum+=i;
-            if(i!=1)
-                sum+=(num/i);
         }
     }
     if(sum==num)
